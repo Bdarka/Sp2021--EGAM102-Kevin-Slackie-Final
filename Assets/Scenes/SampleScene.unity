@@ -570,7 +570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   Health: 10
-  speed: 0
+  speed: 10
+  Bullet: {fileID: 0}
 --- !u!61 &187428920
 BoxCollider2D:
   m_ObjectHideFlags: 0
