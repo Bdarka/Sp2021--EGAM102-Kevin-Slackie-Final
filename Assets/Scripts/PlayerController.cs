@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller; 
+    public CharacterController controller;
+
+    public Animator animator;
 
     Rigidbody2D rb;
     public int Health;
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        animator.SetTrigger("IsWalking");
     }
 
     // Update is called once per frame
@@ -39,11 +43,12 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-
+        animator.SetTrigger("IsJumping");
     }
 
     void Shoot()
     {
+        
         delay = 0;
         Instantiate(Bullet, BulletOrigin.transform.position, Quaternion.identity);
     }
