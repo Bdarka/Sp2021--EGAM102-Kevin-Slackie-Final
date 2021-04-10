@@ -2072,6 +2072,7 @@ GameObject:
   - component: {fileID: 1624285888}
   - component: {fileID: 1624285887}
   - component: {fileID: 1624285886}
+  - component: {fileID: 1624285889}
   m_Layer: 0
   m_Name: 'Larve '
   m_TagString: Untagged
@@ -2210,6 +2211,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1624285889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624285883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b82d61306f71f4b99123dc61809584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 2
+  Bullet: {fileID: 0}
 --- !u!1 &1779513744
 GameObject:
   m_ObjectHideFlags: 0
