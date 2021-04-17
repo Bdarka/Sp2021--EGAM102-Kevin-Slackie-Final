@@ -6,35 +6,29 @@ public class BulletScript : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    int dir = 1;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    public void ChangeDirection()
-    {
-        dir *= -1;
+        rb.velocity = new Vector2(1, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(0, 10 * dir);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (dir == 1)
-        {
+    
             if (col.gameObject.tag == "enemy")
             {
                 col.gameObject.GetComponent<Enemy>().Damage();
 
                 Destroy(gameObject);
             }
-        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D col)

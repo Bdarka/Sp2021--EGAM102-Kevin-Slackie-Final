@@ -11,17 +11,21 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        rb.MovePosition(transform.position + .025f * Vector3.right);
     }
 
     public void Damage()
     {
-
+        Health--; 
+        if(Health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
