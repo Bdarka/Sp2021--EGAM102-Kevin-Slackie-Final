@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        else if (Input.GetKeyDown(KeyCode.LeftShift) && delay > 1000) 
+        else if (Input.GetKeyDown(KeyCode.LeftShift) && delay > 500) 
         {
             StartCoroutine (Shoot());
         }
@@ -77,7 +77,6 @@ public class PlayerController : MonoBehaviour
 
      IEnumerator Shoot()
     {
-        Debug.Log("Shooting Now!");
         delay = 0;
         animator.SetTrigger("IsAttacking");
 
